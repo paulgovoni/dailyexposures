@@ -448,3 +448,16 @@ footer .footer-below {
     display: none;
     opacity: 0;
 }
+
+/*** EMAIL RESIZING ***/
+
+@media screen and (max-width: 480px) {
+
+    #gmail {
+        font-size: 1em;
+    }
+
+    #gmailtext {
+        font-size: 1em;
+    }
+}
