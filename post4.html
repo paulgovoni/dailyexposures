@@ -82,7 +82,7 @@
 
     <!-- Page Header -->
     <!-- Set your background image for this header on the line below. -->
-    <header class="intro-header" style="background-image: url('img/post-bg3.jpg')">
+    <header class="intro-header" style="background-image: url('img/post-bg4.jpg')">
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
@@ -102,30 +102,71 @@
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                     
-                    <a href="#">
+                    <!-- <a href="#">
                         <img class="img-responsive" src="img/hackfsu.jpg" alt="hack fsu moodologist">
-                    </a>
-                    <span class="caption text-muted">Paul Govoni, Mary Kelly, Andrew Pendergast, Loucil Rubio from left to right. Not pictured is group member Tyler Lovell.</span>
+                    </a> -->
+                    <!-- <span class="caption text-muted">Paul Govoni, Mary Kelly, Andrew Pendergast, Loucil Rubio from left to right. Not pictured is group member Tyler Lovell.</span> -->
 
-                    <h2 class="section-heading">Moodologist</h2>
+                    <p>If you want to launch a simple website but dont want to jump through all the hoops of a hosting company or just looking for a cheaper alternative, GitHub Pages is your tool!</p>
+                    <span class="caption text-muted">This post assumes that you have a <a href="https://github.com/">Github account</a> and some basic knowledge of the version control system <a href="http://git-scm.com/">Git.</a></span>
 
-                    <p>During Florida State Universities 30 hour hackathon, students from all around the east coast went from concept to prototype in one short weekend.</p> 
+                    <h2 class="section-heading">Create Your Repository</h2>
 
-                    <p>My team decided to work on a web app that we named "Moodologist" which would be your new personal bartender. Moodologist is an interactive webpage that generates an alcoholic beverage for you based on your mood. So instead of sitting at the bar not knowing what to order, Moodologist will give you the perfect drink you never knew you wanted in just a few clicks. The user is given the option to pick from 4 categories on the home page menu: emoji, landscape, words or colors. From the option chosen, the webpage will generate a drink that best fits your mood.</p>
+                    <p>Navigate over to GitHub and create a new repository for your website. <a href="https://help.github.com/articles/create-a-repo/">Here are directions if you need help.</a> The files that make up your website will need to be stored within this new repository.</p> 
 
-                    <p>Each drink has been given a mood property based on the color of the drink, flavor (mixed with fruits, soda, etc.) and taste (sweet, sour, bitter) of the drink. The site utilizes HTML, CSS, Javascript, JQuery, and is built from scratch on the Bootstrap framework. The site was built within the 30 hour time limit of the competition.</p>
+                    <p>Now open up a terminal (command prompt on Windows) and clone a copy of the repo you just made onto your computer.</p>
 
-                    <p>At the end of the competition, our group was chosen as one of the final six to present our project in front of the entire hack fsu participants. We are happy to have gotten as far as we have!</p>
+                    <p style="background-color:#D4D4D4; padding-left:5%; font-size: 80%">// Retrieve a copy of your GitHub repo.<br>  
+                       git clone https://github.com/user/repository.git<br>
+                       // Move into that directory.<br>
+                       cd repository</p>
+                       <span class="caption text-muted">Make sure that you change the clone URL to the URL of your GitHub repo. This can be found on the main project page.</span>
+                    <p>Once you got your local copy, move into the project folder using the <a href="https://www.google.com/search?q=cd+command&oq=cd+command&aqs=chrome..69i57j0l5.1167j0j1&sourceid=chrome&es_sm=93&ie=UTF-8">cd</a> command.</p>
+                    <h2 class="section-heading">Create an Orphan Branch</h2>
 
-                    <h2 class="section-heading">Some Links</h2>
-                    <a href="http://www.tallahassee.com/story/news/2015/03/22/tinkerers-designers-battle-hackfsu/25194477/">Checkout our article in the local newspaper</a><br>
-                    <a href="http://paulgovoni.com/moodologist">Working Moodologist Design</a><br>
+                    <p>Next it is time to create a new orphan branch within your repo that will hold all of your website files. This new branch should be called "gh-pages"</p>
+
+                    <p style="background-color:#D4D4D4; padding-left:5%; font-size: 80%">git checkout --orphan gh-pages</p>
+
+                    <h2 class="section-heading">Adding Your Website Files</h2>
+
+                    <p>Now that your repo has been properly setup it's time to add all of the HTML, CSS and Javascript files that make up your website. There are multiple ways that you can go about doing this but I am going to only speak of the GitHub client.</p>
+
+                    <p>Download and Install the Github client for <a href="https://mac.github.com/">Mac</a> or <a href="https://windows.github.com/">PC</a>.</p>
+
+                    <p>After installing the client navigate to your cloned repo from the first step in a file explorer. Drag and drop it into your GitHub folder that you specified from installation.</p>
+
+                    <h2 class="section-heading">Push Changes to GitHub</h2>
+
+                    <p>Open your GitHub client. Click the plus sign in the top left and add your local repository to your client.</p>
+
+                    <p>After that you will see your new repo listed on the left. Select the new one and add a small description of the changes and hit commit.</p>
+
+                    <p>Once you have selected commit, navigate to the top right corner and select Sync. This will upload your files to your GitHub Page site.</p>
+
+                    <p>That’s it! Your website should now be available at </p><p style="background-color:#D4D4D4; padding-left:5%; font-size: 80%">http://username.github.io/repository/.</p>
+
+                    <h2 class="section-heading">Using a Custom Domain</h2>
+
+                    <p>Now that you have your files hosted on a GitHub server what if you want to change your web address from the username.github.io address? Thats where this part comes in and this is how I run my website for free.</p>
+
+                    <p>First you will need to create a new file in your local Github repo file from earlier called <p style="background-color:#D4D4D4; padding-left:5%; font-size: 80%">CNAME</p></p>
+
+                    <p>Inside this file you will have your domain name that you wish to use. It should look something like this:<p style="background-color:#D4D4D4; padding-left:5%; font-size: 80%">paulgovoni.com</p></p>
+
+                    <p>Next you will need to update your DNS records for your domain name that you plan on using. This can usually be done through the provided domain name control panel from the domain registrar.</p>
+
+                    <p>With your DNS provider, create A records that reslove to the following IP addresses:</p>
+                    <p style="background-color:#D4D4D4; padding-left:5%; font-size: 80%">192.30.252.153<br>192.30.252.154</p>
+
+                    <p>It may take some time for the DNS changes to take effect. Usually no longer then a few hours. Once the changes have been applied, you should be able to access your new website from your custom domain name.</p>
+
+                    <h2 class="section-heading">You Are Live!</h2>
+                    <p>Keep in mind that GitHub pages does not meet the needs of everyone. You are limited to using static assets (HTML, CSS and JS) for your websites. But if you are ready to launch your first live website for the world to see this is a very good point to start! Dont forget that its free too!</p>
 
 
 
-
-
-                    
+                                      
 
                     
                     <!-- <h2 class="section-heading">Reaching for the Stars</h2> -->
